@@ -19,7 +19,7 @@ class PDF {
 		require 'src/dompdf_config.inc.php';
 
 		$dompdf = new DOMPDF();
-		$dompdf->load_html_file($html);
+		$dompdf->load_html_file($link);
 		$dompdf->render();
 		if($download==true){
 			$dompdf->stream($filename);
